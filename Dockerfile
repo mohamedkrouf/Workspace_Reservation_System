@@ -1,5 +1,5 @@
-FROM eclipse-temurin:11-jre
-WORKDIR /app
-COPY Workspace_Reservation_System.war app.war
+FROM tomcat:11-jdk11
+WORKDIR /usr/local/tomcat/webapps
+COPY Workspace_Reservation_System.war ROOT.war
 EXPOSE 8080
-CMD ["java", "-jar", "app.war"]
+CMD ["catalina.sh", "run"]
