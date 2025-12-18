@@ -1,4 +1,4 @@
-FROM openjdk:11-jdk-slim
+FROM eclipse-temurin:11-jre
 WORKDIR /app
 COPY app.war .
 EXPOSE 8080
