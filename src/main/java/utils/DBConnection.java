@@ -4,11 +4,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DBConnection {
-    private static final String URL = 
-        "jdbc:mysql://localhost:3306/workspace_reservation_db" +
-        "?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
-    private static final String USER = "root";
-    private static final String PASSWORD = "mohamedkrouf0000*/";
+
+// New (uses Railway environment variables)
+    private static final String MYSQL_HOST = System.getenv().getOrDefault("mysql.railway.internal", "localhost");
+    private static final String MYSQL_USER = System.getenv().getOrDefault("root", "root");
+    private static final String MYSQL_PASSWORD = System.getenv().getOrDefault("HSvxOPPNUuFVKuFCqiOXgLmqjefcyFJg", "");
 
     public static Connection getConnection() {
         try {
