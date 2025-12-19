@@ -5,12 +5,12 @@
          https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
 
-    <!-- Welcome file list -->
+    <!-- Welcome file -->
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
-    <!-- AuthFilter: Protects authenticated pages -->
+    <!-- AuthFilter: Protects authenticated pages only -->
     <filter>
         <filter-name>AuthFilter</filter-name>
         <filter-class>filter.AuthFilter</filter-class>
@@ -41,7 +41,7 @@
         <url-pattern>/cancel-reservation</url-pattern>
     </filter-mapping>
 
-    <!-- AdminFilter: Restricts admin access -->
+    <!-- AdminFilter: Restricts admin pages -->
     <filter>
         <filter-name>AdminFilter</filter-name>
         <filter-class>filter.AdminFilter</filter-class>
@@ -57,7 +57,7 @@
         <url-pattern>/admin/*</url-pattern>
     </filter-mapping>
 
-    <!-- Session configuration: 30 minutes timeout -->
+    <!-- Session timeout: 30 minutes -->
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
