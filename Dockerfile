@@ -1,4 +1,4 @@
-FROM tomcat:11-jdk22
+FROM tomcat:10-jdk11
 
 # Remove default Tomcat applications
 RUN rm -rf /usr/local/tomcat/webapps/*
